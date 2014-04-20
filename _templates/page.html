@@ -1,6 +1,6 @@
 {% extends "!page.html" %}
 
-{% block footer %}
+{% block body %}
 {{ super() }}
 <h2>
     讨论
@@ -8,6 +8,10 @@
 </h2>
 
 <div id="disqus_thread"></div>
+{% endblock %}
+
+{% block footer %}
+{{ super() }}
 <script type="text/javascript">
 /* * * CONFIGURATION VARIABLES: EDIT BEFORE PASTING INTO YOUR WEBPAGE * * */
 var disqus_shortname = 'scrapychs'; // required: replace example with your forum shortname
