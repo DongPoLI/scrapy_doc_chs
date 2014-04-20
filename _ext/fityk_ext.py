@@ -1,3 +1,8 @@
+def setup(app):
+    pass
+
+
+
 # this is hack is needed to use our layout.html on ReadTheDocs
 from sphinx.jinja2glue import BuiltinTemplateLoader
 from jinja2 import TemplateNotFound
