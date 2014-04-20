@@ -18,8 +18,9 @@ class MyTemplateLoader(BuiltinTemplateLoader):
         print("\n(MyTemplateLoader.get_source) searching for %s" % template)
         loaders = self.loaders
         # exclamation mark starts search from theme
-        if template.startswith('!'):
-            loaders = loaders[self.templatepathlen-1:]
+        if template.startswith('?'):
+            #loaders = loaders[self.templatepathlen-1:]
+            loaders = loaders[1:]
             template = template[1:]
         for loader in loaders:
             print("\ttrying in: %s" % ":".join(loader.searchpath))
