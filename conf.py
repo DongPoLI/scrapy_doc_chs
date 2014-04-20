@@ -12,6 +12,7 @@
 # serve to show the default.
 
 import sys
+import os
 from os import path
 
 # If your extensions are in another directory, add it here. If the directory
@@ -26,10 +27,15 @@ sys.path.append(path.join(path.dirname(path.dirname(__file__)), "scrapy"))
 
 # Add any Sphinx extension module names here, as strings. They can be extensions
 # coming with Sphinx (named 'sphinx.ext.*') or your custom ones.
-extensions = ['scrapydocs']
+extensions = ['scrapydocs', 'fityk_ext']
 
 # Add any paths that contain templates here, relative to this directory.
 templates_path = ['_templates']
+
+
+if os.getenv('READTHEDOCS'):
+    # RTD has own layout.html. This hack is needed to use all layout.html files.
+    template_bridge = "fityk_ext.MyTemplateLoader"
 
 # The suffix of source filenames.
 source_suffix = '.rst'
