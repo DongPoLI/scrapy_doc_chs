@@ -38,6 +38,7 @@ if os.getenv('READTHEDOCS'):
     #template_bridge = "fityk_ext.MyTemplateLoader"
     pass
 
+
 # The suffix of source filenames.
 source_suffix = '.rst'
 
